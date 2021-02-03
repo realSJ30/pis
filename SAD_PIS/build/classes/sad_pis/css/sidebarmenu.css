@@ -1,0 +1,80 @@
+.sidepanel-container{
+    -fx-background-color: #1E2227;
+}
+.drawer-menu{
+    -fx-background-color: #1E2227;
+}
+
+.titled-pane:focused {
+    -fx-background-color : derive(-base, -10%);
+}
+.titled-pane:expanded .title .text,
+.titled-pane:expanded .title .arrow-button .arrow,
+.titled-pane:expanded .title .icon
+{
+  -fx-fill : #4CB959;    
+  -fx-background-color : #4CB959;
+  
+}
+
+.Vbox{
+    -fx-background-color: #1E2227;    
+}
+
+.titled-pane:collapsed .title,
+.titled-pane:collapsed .title .text
+{
+    -fx-fill : white;  
+    -fx-background-color : transparent;
+    -fx-cursor : hand;
+    -fx-padding : 15px 8px 15px 15px;
+}
+.titled-pane:collapsed .title .icon
+{
+    -fx-fill : white;
+}
+.titled-pane:collapsed .title .arrow-button .arrow
+{
+    -fx-background-color : white;
+}
+
+.titled-pane:expanded .title
+{
+    -fx-padding :  15px 8px 15px 15px;    
+    -fx-background-color : transparent;
+}
+
+.titled-pane>*.title>*.arrow-button { /* FX theme stylesheet */
+    -fx-focus-color : transparent;
+}
+
+.titled-pane>*.title>*.arrow-button>*.arrow { /* FX theme stylesheet */
+    -fx-shape: "M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z";
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}
+
+.titled-pane .jfx-button{
+    /*-fx-background-color: transparent;*/
+    /*-fx-border-insets: -20px;*/
+    -fx-alignment  : CENTER;
+    -fx-background-radius: 0;    
+}
+
+.titled-pane:collapsed .title{
+    -fx-background-radius: 0;
+}
+
+.titled-pane>*.content { /* FX theme stylesheet */
+    -fx-border-insets: -1px -1px -1px -1px;
+    -fx-padding: 0px;
+}
+
+.titled-pane>*.title {
+    -fx-padding: 10;
+}
+.icon{
+    -fx-fill: white;
+}
+
+

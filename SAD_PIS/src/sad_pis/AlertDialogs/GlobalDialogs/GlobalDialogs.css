@@ -1,0 +1,29 @@
+.container{
+    -fx-background-color: white;
+}
+.button-success{    
+    -fx-background-radius: 4;
+}
+.button-success:hover{
+    -fx-background-color: #17A05D;
+    -fx-text-fill: white;
+}
+.button-warning{
+    -fx-background-radius: 4;
+}
+.button-warning:hover{
+    -fx-background-color: #FC6E51;
+    -fx-text-fill: white;
+}
+.button-error{
+    -fx-background-radius: 4;
+}
+.button-error:hover{
+    -fx-background-color: #ED5565;
+    -fx-text-fill: white;
+}
+/*
+
+
+
+*/

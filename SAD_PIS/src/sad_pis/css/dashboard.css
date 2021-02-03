@@ -1,0 +1,11 @@
+.header{
+    -fx-background-color: white;
+    -fx-border-width: 0 0 0.5 0;
+    -fx-border-color: gray;    
+}
+.containers{
+    -fx-background-color: white;
+    -fx-border-width: 0.5 0.5 0.5 0.5;
+    -fx-border-color: gray;
+       
+}

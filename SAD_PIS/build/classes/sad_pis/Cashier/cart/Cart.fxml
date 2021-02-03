@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="391.0" prefWidth="534.0" stylesheets="@../../css/cashier.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sad_pis.Cashier.cart.CartController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="534.0" style="-fx-background-color: #18985A;">
+               <children>
+                  <Label text="My Orders" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <MaterialDesignIconView fill="WHITE" glyphName="MAGNIFY" size="25" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" top="4.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="label_customer" alignment="CENTER_RIGHT" layoutX="20.0" layoutY="14.0" prefHeight="30.0" prefWidth="167.0" text="N/A" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="200.0" top="4.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets left="35.0" right="35.0" top="15.0" />
+               </VBox.margin>
+            </Separator>
+            <TableView fx:id="tb" prefHeight="304.0" prefWidth="464.0">
+              <columns>
+                <TableColumn fx:id="tc1" prefWidth="161.0" resizable="false" text="Product" />
+                <TableColumn fx:id="tc2" prefWidth="73.0" resizable="false" text="Qnty" />
+                  <TableColumn fx:id="tc3" prefWidth="68.0" resizable="false" text="Price" />
+                  <TableColumn fx:id="tc4" prefWidth="95.0" resizable="false" text="Total Amount" />
+                  <TableColumn fx:id="tc5" prefWidth="66.0" resizable="false">
+                     <graphic>
+                        <MaterialDesignIconView fill="#a81111" glyphName="DELETE" size="20" />
+                     </graphic>
+                  </TableColumn>
+              </columns>
+               <VBox.margin>
+                  <Insets left="35.0" right="35.0" top="5.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

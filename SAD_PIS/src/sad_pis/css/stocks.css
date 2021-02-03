@@ -1,0 +1,24 @@
+.header{
+    -fx-background-color: #40B063;
+    -fx-background-radius: 4;
+}
+.header .label{
+    -fx-text-fill: white;
+}
+.body-container{
+    -fx-background-color: #F3F3F3;
+    -fx-background-radius: 2;
+}
+.sub-body{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 2;
+}
+.sub-body-header{
+    -fx-background-color: #B9C9E0;
+}
+.label-red{
+    -fx-text-fill: red;
+}
+.label-green{
+    -fx-text-fill: green;
+}

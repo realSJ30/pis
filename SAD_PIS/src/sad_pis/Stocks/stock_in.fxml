@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="1130.0" style="-fx-background-color: white;" stylesheets="@../css/stocks.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sad_pis.Stocks.Stock_inController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="59.0" prefWidth="1040.0" stylesheets="@../css/stocks.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <VBox prefHeight="38.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="294.0" text="MANAGE STOCK IN">
+                           <font>
+                              <Font name="Century Gothic" size="30.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="19.0" prefWidth="131.0" text="Enquiry">
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="69.0" prefHeight="200.0" prefWidth="200.0" styleClass="body-container" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="80.0">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="5.0" radius="2.0" spread="0.2" width="5.0" />
+               </effect>
+               <children>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="521.0" prefWidth="1020.0" styleClass="sub-body" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <VBox layoutX="14.0" layoutY="43.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="30.0" prefWidth="200.0" styleClass="sub-body-header">
+                                 <children>
+                                    <HBox prefHeight="10.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label prefHeight="30.0" prefWidth="101.0" text="STOCK IN TABLE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                              <HBox prefHeight="490.0" prefWidth="738.0">
+                                 <children>
+                                    <AnchorPane prefHeight="490.0" prefWidth="1200.0">
+                                       <children>
+                                          <VBox layoutX="78.0" layoutY="45.0" prefHeight="490.0" prefWidth="1040.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox prefHeight="35.0" prefWidth="1020.0">
+                                                   <children>
+                                                      <JFXButton id="button-add" onAction="#showAddStock" prefHeight="34.0" prefWidth="215.0" stylesheets="@../css/buttons.css" text="CREATE STOCK IN DETAILS">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" top="1.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                      <JFXCheckBox fx:id="check_show" checkedColor="#102d9c" onAction="#showAll" text="Show all">
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" top="8.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </JFXCheckBox>
+                                                      <TextField fx:id="text_search" prefHeight="25.0" prefWidth="236.0" promptText="Search">
+                                                         <HBox.margin>
+                                                            <Insets left="530.0" top="5.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <TableView fx:id="table_stocks" prefHeight="143.0" prefWidth="1010.0">
+                                                  <columns>
+                                                    <TableColumn fx:id="col_stockno" prefWidth="158.0" resizable="false" text="REFERENCE #" />
+                                                    <TableColumn fx:id="col_totalproducts" prefWidth="148.0" resizable="false" text="TOTAL PRODUCTS" />
+                                                      <TableColumn fx:id="col_date" prefWidth="174.0" resizable="false" text="DATE OF STOCK" />
+                                                      <TableColumn fx:id="col_user" prefWidth="217.0" resizable="false" text="USER" />
+                                                      <TableColumn fx:id="col_action" prefWidth="332.0" resizable="false" text="Action" />
+                                                  </columns>
+                                                   <VBox.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="1.0" />
+                                                   </VBox.margin>
+                                                </TableView>
+                                                <VBox prefHeight="306.0" prefWidth="1011.0">
+                                                   <children>
+                                                      <AnchorPane prefHeight="30.0" prefWidth="1011.0" stylesheets="@../css/stocks.css">
+                                                         <children>
+                                                            <HBox prefHeight="30.0" prefWidth="232.0" style="-fx-background-color: #B9C9E0; -fx-background-radius: 6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+                                                               <children>
+                                                                  <Label prefHeight="30.0" prefWidth="84.0" text="REFERENCE:">
+                                                                     <HBox.margin>
+                                                                        <Insets left="10.0" />
+                                                                     </HBox.margin>
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label fx:id="label_no" layoutX="15.0" layoutY="10.0" prefHeight="30.0" prefWidth="60.0" text="N/A">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="12.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                         <opaqueInsets>
+                                                            <Insets />
+                                                         </opaqueInsets>
+                                                      </AnchorPane>
+                                                      <HBox prefHeight="38.0" prefWidth="1020.0">
+                                                         <children>
+                                                            <TextField fx:id="text_productname" onKeyPressed="#inputValidation" promptText="Product Name">
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" top="5.0" />
+                                                               </HBox.margin>
+                                                            </TextField>
+                                                            <TextField fx:id="text_qnty" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="45.0" promptText="Qnty.">
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" top="5.0" />
+                                                               </HBox.margin>
+                                                            </TextField>
+                                                            <TextField fx:id="text_price" layoutX="159.0" layoutY="10.0" prefHeight="25.0" prefWidth="105.0" promptText="Price">
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" top="5.0" />
+                                                               </HBox.margin>
+                                                            </TextField>
+                                                            <ComboBox fx:id="cbo_supplier" prefHeight="25.0" prefWidth="119.0">
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" top="5.0" />
+                                                               </HBox.margin>
+                                                            </ComboBox>
+                                                            <JFXButton id="button-save_add" fx:id="btn_addproduct" onAction="#addProductStock" prefHeight="25.0" prefWidth="100.0" stylesheets="@../css/buttons.css" text="Add Product">
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" top="5.0" />
+                                                               </HBox.margin>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </HBox>
+                                                      <TableView fx:id="table_stockdetails" prefHeight="178.0" prefWidth="1010.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="col_productname" prefWidth="228.0" resizable="false" text="Product Name" />
+                                                            <TableColumn fx:id="col_quantity" prefWidth="63.0" resizable="false" text="Qnty." />
+                                                            <TableColumn fx:id="col_purchaseprice" prefWidth="152.0" resizable="false" text="Purchase Price" />
+                                                            <TableColumn fx:id="col_totalprice" prefWidth="134.0" resizable="false" text="Total Price" />
+                                                            <TableColumn fx:id="col_supplier" prefWidth="148.0" resizable="false" text="Supplier" />
+                                                            <TableColumn fx:id="col_update" prefWidth="281.0" resizable="false" text="Action" />
+                                                         </columns>
+                                                         <VBox.margin>
+                                                            <Insets left="5.0" right="5.0" />
+                                                         </VBox.margin>
+                                                      </TableView>
+                                                      <HBox prefHeight="30.0" prefWidth="631.0">
+                                                         <children>
+                                                            <Label prefHeight="30.0" prefWidth="128.0" text="Total Products:">
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label fx:id="label_productCount" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="68.0" styleClass="label-green" stylesheets="@../css/stocks.css" text="N/A" />
+                                                            <JFXButton id="button-save_add" fx:id="btn_updateAll" onAction="#updateAllMethod" prefHeight="25.0" prefWidth="100.0" stylesheets="@../css/buttons.css" text="Update All">
+                                                               <HBox.margin>
+                                                                  <Insets left="560.0" top="3.0" />
+                                                               </HBox.margin>
+                                                            </JFXButton>
+                                                            <JFXButton id="button-remove" fx:id="btn_removeAll" layoutX="211.0" layoutY="13.0" onAction="#removeAllMethod" prefHeight="25.0" prefWidth="100.0" stylesheets="@../css/buttons.css" text="Remove All">
+                                                               <HBox.margin>
+                                                                  <Insets left="20.0" top="3.0" />
+                                                               </HBox.margin>
+                                                            </JFXButton>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox layoutX="10.0" layoutY="415.0" prefHeight="30.0" prefWidth="631.0">
+                                                         <children>
+                                                            <Label prefHeight="30.0" prefWidth="128.0" text="Total Price: ">
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label fx:id="label_totalPrice" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="68.0" styleClass="label-red" stylesheets="@../css/stocks.css" text="N/A" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" height="5.0" radius="2.0" spread="0.2" width="5.0" />
+                     </effect>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

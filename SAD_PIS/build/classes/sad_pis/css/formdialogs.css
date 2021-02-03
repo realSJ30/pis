@@ -1,0 +1,11 @@
+.header{
+    -fx-background-color: #6E6E6E;    
+}
+.container{
+    -fx-background-radius: 5 0 5 0;
+    -fx-border-radius: 5 0 5 0;
+    -fx-background-color: white;
+}
+.root{
+    -fx-background-color: transaparent;
+}

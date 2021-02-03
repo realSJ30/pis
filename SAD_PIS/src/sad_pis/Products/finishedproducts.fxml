@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="mainContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="1087.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sad_pis.Products.FinishedproductsController">
+   <children>
+      <AnchorPane prefHeight="515.0" prefWidth="1141.0" stylesheets="@../css/products.css">
+         <children>
+            <AnchorPane prefHeight="59.0" prefWidth="1087.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <VBox prefHeight="38.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="294.0" text="Products" textFill="#171717">
+                           <font>
+                              <Font name="Century Gothic" size="30.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="19.0" prefWidth="131.0" text="Grocery">
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="70.0" prefHeight="402.0" prefWidth="333.0" styleClass="container" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="80.0">
+               <children>
+                  <VBox layoutX="14.0" layoutY="12.0" prefHeight="379.0" prefWidth="561.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox prefHeight="31.0" prefWidth="352.0">
+                           <children>
+                              <Label layoutX="35.0" layoutY="10.0" prefHeight="50.0" prefWidth="91.0" styleClass="form-label" text="Product No.">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="product_no" layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="64.0" text="0001">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="2.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <VBox prefHeight="61.0" prefWidth="352.0">
+                           <children>
+                              <Label prefHeight="26.0" prefWidth="167.0" text="Product Name:">
+                                 <font>
+                                    <Font name="Coco Gothic" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="text_name" prefHeight="25.0" prefWidth="342.0">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="60.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="64.0" prefHeight="62.0" prefWidth="311.0">
+                           <children>
+                              <Label prefHeight="26.0" prefWidth="167.0" text="Category:">
+                                 <font>
+                                    <Font name="Coco Gothic" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="30.0" prefWidth="311.0">
+                                 <children>
+                                    <TextField fx:id="text_category" onKeyPressed="#initInputValidation" prefHeight="25.0" prefWidth="253.0">
+                                       <HBox.margin>
+                                          <Insets left="20.0" top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="label_categorycode" prefHeight="28.0" prefWidth="25.0" text="n/a" visible="false" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="125.0" prefHeight="61.0" prefWidth="352.0">
+                           <children>
+                              <Label prefHeight="26.0" prefWidth="167.0" text="Quantity Type:">
+                                 <font>
+                                    <Font name="Coco Gothic" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <ComboBox fx:id="cbo_qnty" prefHeight="25.0" prefWidth="252.0">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="60.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="64.0" prefHeight="61.0" prefWidth="352.0">
+                           <children>
+                              <Label prefHeight="26.0" prefWidth="167.0" text="Mark up price:">
+                                 <font>
+                                    <Font name="Coco Gothic" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                                 <tooltip>
+                                    <Tooltip text="Price Interest" />
+                                 </tooltip>
+                              </Label>
+                              <TextField fx:id="text_price" prefHeight="25.0" prefWidth="275.0" promptText="Price Interest">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="60.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <HBox prefHeight="50.0" prefWidth="1121.0">
+                           <children>
+                              <JFXButton id="button-add" fx:id="btn_addproduct" buttonType="RAISED" onAction="#addProduct" prefHeight="28.0" prefWidth="150.0" stylesheets="@../css/buttons.css" text="Add Product" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="100.0" top="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Calibri" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" color="#030303" height="5.0" radius="2.0" spread="0.2" width="5.0" />
+               </effect>
+            </AnchorPane>
+            <AnchorPane layoutX="335.0" layoutY="80.0" prefHeight="402.0" prefWidth="723.0" styleClass="container" AnchorPane.leftAnchor="351.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="80.0">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="5.0" radius="2.0" spread="0.2" width="5.0" />
+               </effect>
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox prefHeight="31.0" prefWidth="712.0">
+                           <children>
+                              <Label prefHeight="31.0" prefWidth="118.0" styleClass="form-label" text="My Products">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                           </children></HBox>
+                        <Separator prefWidth="200.0" />
+                        <HBox prefHeight="35.0" prefWidth="712.0">
+                           <children>
+                              <TextField fx:id="text_search" prefHeight="25.0" prefWidth="280.0" promptText="Search">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="4.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="productTableView" prefHeight="250.0" prefWidth="713.0">
+                          <columns>
+                            <TableColumn fx:id="productName" prefWidth="180.0" resizable="false" text="Product Name" />
+                            <TableColumn fx:id="productCategory" prefWidth="104.0" resizable="false" text="Category" />
+                              <TableColumn fx:id="productQuantity" prefWidth="82.0" resizable="false" text="Qnty. Type" />
+                              <TableColumn fx:id="markup" minWidth="3.0" prefWidth="66.0" resizable="false" text="Mark up" />
+                              <TableColumn fx:id="sellprice" prefWidth="75.0" resizable="false" text="Sell Price" />
+                              <TableColumn fx:id="update" prefWidth="205.0" resizable="false" text="Action" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+      </AnchorPane>
+   </children>
+</StackPane>

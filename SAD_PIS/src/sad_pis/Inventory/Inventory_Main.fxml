@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="1087.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sad_pis.Inventory.Inventory_MainController">
+   <children>
+      <AnchorPane id="body" prefHeight="515.0" prefWidth="1141.0" style="-fx-background-color: white;" stylesheets="@../css/inventory.css">
+         <children>
+            <AnchorPane prefHeight="59.0" prefWidth="1040.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <HBox prefHeight="43.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label prefHeight="77.0" prefWidth="294.0" text="My Stocks">
+                           <font>
+                              <Font name="Century Gothic" size="30.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="135.0" prefHeight="490.0" prefWidth="569.0" styleClass="container" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="508.0" AnchorPane.topAnchor="135.0">
+               <children>
+                  <VBox prefHeight="311.0" prefWidth="515.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label prefHeight="42.0" prefWidth="180.0" text="Grocery Stocks">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="text_search" prefHeight="30.0" prefWidth="286.0" promptText="Search">
+                           <VBox.margin>
+                              <Insets left="15.0" right="250.0" top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TableView fx:id="tbl_stocks" prefHeight="395.0" prefWidth="559.0">
+                           <columns>
+                              <TableColumn fx:id="col_id" prefWidth="41.0" resizable="false" text="REF. " />
+                              <TableColumn fx:id="col_product" prefWidth="167.0" resizable="false" text="Product Name" />
+                              <TableColumn fx:id="col_unit" prefWidth="67.0" resizable="false" text="Unit" />
+                              <TableColumn fx:id="col_type" prefWidth="101.0" resizable="false" text="Type" />
+                              <TableColumn fx:id="col_category" prefWidth="118.0" resizable="false" text="Category" />
+                              <TableColumn fx:id="col_qnty" prefWidth="52.0" resizable="false" text="Qnty." />
+                           </columns>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="5.0" radius="2.0" spread="0.2" width="5.0" />
+               </effect>
+            </AnchorPane>
+            <AnchorPane layoutX="558.0" layoutY="135.0" prefHeight="490.0" prefWidth="491.0" styleClass="container" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="135.0">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="5.0" radius="2.0" spread="0.2" width="5.0" />
+               </effect>
+               <children>
+                  <VBox layoutX="57.0" layoutY="30.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label prefHeight="42.0" prefWidth="180.0" text="Carcass Stocks">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="text_carcass_search" prefHeight="30.0" prefWidth="475.0" promptText="Search">
+                           <VBox.margin>
+                              <Insets left="10.0" right="250.0" top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TableView fx:id="table_stockcarcass" prefHeight="392.0" prefWidth="481.0">
+                          <columns>
+                            <TableColumn fx:id="col_cref" prefWidth="47.0" resizable="false" text="REF." />
+                            <TableColumn fx:id="col_productcarcass" prefWidth="159.0" resizable="false" text="Product [Meat]" />
+                              <TableColumn fx:id="col_unitcarcass" prefWidth="74.0" resizable="false" text="Unit" />
+                              <TableColumn fx:id="col_meatcarcass" prefWidth="84.0" resizable="false" text="Meat" />
+                              <TableColumn fx:id="col_qntycarcass" prefWidth="72.0" resizable="false" text="Qnty." />
+                          </columns>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <VBox layoutX="14.0" layoutY="66.0" prefHeight="59.0" prefWidth="516.0">
+               <children>
+                  <HBox prefHeight="24.0" prefWidth="516.0">
+                     <children>
+                        <Label prefHeight="24.0" prefWidth="84.0" text="Legend:">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="36.0" prefWidth="516.0">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="170.0" text="Low Stock">
+                           <graphic>
+                              <MaterialDesignIconView fill="#c30000" glyphName="CHECKBOX_BLANK" size="20" />
+                           </graphic>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

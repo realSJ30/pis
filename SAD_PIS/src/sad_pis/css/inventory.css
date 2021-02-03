@@ -1,0 +1,18 @@
+.header{
+    -fx-background-color: #40B063;
+    -fx-background-radius: 4;
+}
+.header .label{
+    -fx-text-fill: white;
+}
+.container{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 6;
+}
+#body{
+    -fx-background-color: #EFF7F7;
+}
+#label{
+    -fx-text-fill: #909090;
+    -fx-font: bold 14px "Century Gothic";
+}

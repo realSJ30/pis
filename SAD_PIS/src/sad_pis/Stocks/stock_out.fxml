@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="1060.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sad_pis.Stocks.Stock_outController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane prefHeight="59.0" prefWidth="1040.0" stylesheets="@../css/stocks.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <HBox prefHeight="43.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label prefHeight="77.0" prefWidth="294.0" text="Adjust Stocks">
+                           <font>
+                              <Font name="Century Gothic" size="30.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="311.0" prefWidth="1040.0" styleClass="container" stylesheets="@../css/inventory.css" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="80.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TextField fx:id="text_search" prefHeight="30.0" prefWidth="286.0" promptText="Search">
+                           <VBox.margin>
+                              <Insets left="15.0" right="820.0" top="15.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TableView fx:id="tbl_stocks" prefHeight="250.0" prefWidth="1030.0">
+                           <columns>
+                              <TableColumn fx:id="col_id" prefWidth="75.0" resizable="false" text="REF. " />
+                              <TableColumn fx:id="col_product" prefWidth="230.99996948242188" resizable="false" text="Product Name" />
+                              <TableColumn fx:id="col_type" prefWidth="153.0" resizable="false" text="Type" />
+                              <TableColumn fx:id="col_category" prefWidth="217.0" resizable="false" text="Category" />
+                              <TableColumn fx:id="col_qnty" prefWidth="130.0" resizable="false" text="Quantity" />
+                              <TableColumn fx:id="col_edit" prefWidth="130.0" resizable="false" text="Edit" />
+                           </columns>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" top="10.0" />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="5.0" radius="2.0" spread="0.2" width="5.0" />
+               </effect>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="402.0" prefHeight="216.0" prefWidth="545.0" styleClass="container" stylesheets="@../css/inventory.css" AnchorPane.leftAnchor="10.0">
+               <children>
+                  <VBox prefHeight="216.0" prefWidth="1040.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox prefHeight="40.0" prefWidth="506.0">
+                           <children>
+                              <Label prefHeight="40.0" prefWidth="96.0" text="Ref no.">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_no" prefHeight="39.0" prefWidth="103.0" text="N/A" textFill="#868484">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="506.0">
+                           <children>
+                              <Label prefHeight="40.0" prefWidth="96.0" text="Product:">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_product" prefHeight="39.0" prefWidth="225.0" text="N/A" textFill="#868484">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="50.0" prefHeight="40.0" prefWidth="506.0">
+                           <children>
+                              <Label prefHeight="40.0" prefWidth="96.0" text="Type:">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_type" prefHeight="39.0" prefWidth="164.0" text="N/A" textFill="#868484">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="text_qnty" prefHeight="32.0" prefWidth="255.0" promptText="Adjust Qnty" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="90.0" prefHeight="40.0" prefWidth="506.0">
+                           <children>
+                              <Label prefHeight="40.0" prefWidth="96.0" text="Category:">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_category" prefHeight="39.0" prefWidth="166.0" text="N/A" textFill="#868484">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="text_remarks" prefHeight="32.0" prefWidth="255.0" promptText="Remarks">
+                                 <HBox.margin>
+                                    <Insets top="3.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="130.0" prefHeight="40.0" prefWidth="506.0">
+                           <children>
+                              <Label prefHeight="40.0" prefWidth="96.0" text="Quantity:">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="label_qnty" prefHeight="39.0" prefWidth="103.0" text="N/A" textFill="#868484">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="cbo_adjust" onAction="#adjustQntybyComboBox" prefHeight="25.0" prefWidth="119.0">
+                                 <HBox.margin>
+                                    <Insets left="62.0" top="8.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <JFXButton id="button-add" fx:id="btn_update" onAction="#addProductChange" prefHeight="25.0" prefWidth="113.0" stylesheets="@../css/buttons.css" text="Update">
+                                 <HBox.margin>
+                                    <Insets left="25.0" top="6.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="5.0" radius="2.0" spread="0.2" width="5.0" />
+               </effect>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

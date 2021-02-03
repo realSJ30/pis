@@ -1,0 +1,15 @@
+/* Design phase for my dashboard*/
+.heading{
+    -fx-background-color: #252733;
+}
+.navbar{
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: gray;
+    -fx-border-width: 0px 0px 1px 0px;
+}
+#body{
+    -fx-background-color: #EFF7F7;
+}
+
+
+

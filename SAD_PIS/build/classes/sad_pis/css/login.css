@@ -1,0 +1,22 @@
+.login-header{
+    -fx-background-color: #252733;
+}
+.login-body{
+    -fx-background-color: #FFFFFF;
+}
+.login-button{
+    -fx-background-color: #3F6AD8;
+}
+.text-username{
+    -fx-border-color: white;
+    -fx-border-width: 10;
+}
+.text-username:focused{
+    -fx-border-color: white;
+    -fx-highlight-fill: white;
+}
+.username-container{
+    -fx-border-color: gray;
+    -fx-border-width: 0.5 0.5 0.5 0.5;
+    -fx-border-radius: 4;
+}

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="420.0" prefWidth="345.0" stylesheets="@../css/formdialogs.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sad_pis.FormDialogs.AddSupplierDialogController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="34.0" prefWidth="345.0" styleClass="header">
+               <children>
+                  <HBox prefHeight="50.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label prefHeight="50.0" prefWidth="245.0" text="Supplier Details" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                           <font>
+                              <Font name="Century Gothic" size="16.0" />
+                           </font>
+                           <graphic>
+                              <MaterialDesignIconView glyphName="TRUCK" size="25" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets left="25.0" right="25.0" top="5.0" />
+               </VBox.margin></Separator>
+            <HBox prefHeight="40.0" prefWidth="450.0">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+               <children>
+                  <Label prefHeight="40.0" prefWidth="105.0" text="Supplier Name:">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="8.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="text_name" prefHeight="25.0" prefWidth="190.0" promptText="Name">
+                     <HBox.margin>
+                        <Insets top="8.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="88.0" prefHeight="40.0" prefWidth="450.0">
+               <children>
+                  <Label prefHeight="40.0" prefWidth="105.0" text="Contact:">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="8.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="text_contact" prefHeight="25.0" prefWidth="190.0" promptText="+639-2223-222">
+                     <HBox.margin>
+                        <Insets top="8.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="128.0" prefHeight="40.0" prefWidth="450.0">
+               <children>
+                  <Label prefHeight="40.0" prefWidth="105.0" text="Email:">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="8.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="text_email" prefHeight="25.0" prefWidth="190.0" promptText="example@gmail.com">
+                     <HBox.margin>
+                        <Insets top="8.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="168.0" prefHeight="90.0" prefWidth="450.0">
+               <children>
+                  <Label prefHeight="40.0" prefWidth="105.0" text="Address:">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="8.0" />
+                     </padding>
+                  </Label>
+                  <TextArea fx:id="text_address" prefHeight="90.0" prefWidth="190.0" />
+               </children>
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="168.0" prefHeight="40.0" prefWidth="450.0">
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+               <children>
+                  <JFXButton id="button-add" fx:id="btn_add" onAction="#addSupplier" prefHeight="25.0" prefWidth="190.0" stylesheets="@../css/buttons.css" text="Add Supplier" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="130.0" top="8.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

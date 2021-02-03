@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="250.0" prefWidth="390.0" style="-fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="66.0" prefWidth="390.0" style="-fx-background-color: #17A05D;">
+         <children>
+            <MaterialDesignIconView fill="WHITE" glyphName="CHECK" size="55">
+               <HBox.margin>
+                  <Insets left="165.0" top="5.0" />
+               </HBox.margin>
+            </MaterialDesignIconView>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="521.0" prefWidth="1142.0" stylesheets="@../../css/inventoryView.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <AnchorPane prefHeight="501.0" prefWidth="522.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="42.0" prefWidth="478.0" styleClass="inventorylist-header">
+                           <children>
+                              <HBox prefHeight="37.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label prefHeight="42.0" prefWidth="195.0" text="New Category" textFill="WHITE">
+                                       <font>
+                                          <Font name="Century Gothic" size="20.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <Label prefHeight="21.0" prefWidth="173.0" text="Category Name:">
+                           <VBox.margin>
+                              <Insets left="15.0" top="50.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Century Gothic" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField prefHeight="40.0" prefWidth="307.0" promptText="Title">
+                           <VBox.margin>
+                              <Insets left="15.0" right="200.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Coco Gothic" size="13.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="25.0" layoutY="102.0" prefHeight="21.0" prefWidth="173.0" text="Description:">
+                           <font>
+                              <Font name="Century Gothic" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="15.0" top="30.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextArea prefHeight="158.0" prefWidth="522.0" promptText="Some text here please...">
+                           <VBox.margin>
+                              <Insets left="15.0" right="70.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Coco Gothic" size="18.0" />
+                           </font>
+                        </TextArea>
+                        <JFXButton prefHeight="33.0" prefWidth="175.0" styleClass="inventorylist-button-print" text="Add Category" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets left="15.0" top="15.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

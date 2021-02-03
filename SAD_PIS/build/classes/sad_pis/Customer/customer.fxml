@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="1060.0" stylesheets="@../css/inventory.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sad_pis.Customer.CustomerController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="515.0" prefWidth="1141.0" stylesheets="@../css/inventory.css">
+         <children>
+            <AnchorPane prefHeight="59.0" prefWidth="1040.0" stylesheets="@../css/inventory.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <VBox prefHeight="38.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label prefHeight="38.0" prefWidth="328.0" text="Customers">
+                           <font>
+                              <Font name="Century Gothic" size="30.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="19.0" prefWidth="131.0" text="Records">
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="70.0" prefHeight="200.0" prefWidth="200.0" styleClass="container" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="80.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox prefHeight="32.0" prefWidth="1121.0">
+                           <children>
+                              <TextField fx:id="text_search" prefHeight="25.0" prefWidth="205.0" promptText="Search">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="3.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TableView fx:id="customerTable" prefHeight="260.0" prefWidth="1121.0">
+                           <columns>
+                              <TableColumn fx:id="customerID" prefWidth="49.0" resizable="false" text="No." />
+                              <TableColumn fx:id="customerName" prefWidth="215.0" resizable="false" text="Customer Name" />
+                              <TableColumn fx:id="customerContact" prefWidth="177.0" resizable="false" text="Contact" />
+                              <TableColumn fx:id="customerAddress" prefWidth="164.0" resizable="false" text="Address" />
+                              <TableColumn fx:id="gender" prefWidth="89.0" resizable="false" text="Gender" />
+                              <TableColumn fx:id="col_update" prefWidth="313.0" resizable="false" text="Action" />
+                           </columns>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TableView>
+                        <HBox prefHeight="40.0" prefWidth="1121.0">
+                           <children>
+                              <JFXButton id="button-add" onAction="#showCustomerDialog" prefHeight="25.0" prefWidth="175.0" stylesheets="@../css/buttons.css" text="New Customer" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="8.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="5.0" radius="2.0" spread="0.2" width="5.0" />
+               </effect>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

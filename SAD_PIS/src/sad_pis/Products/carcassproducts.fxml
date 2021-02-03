@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="1087.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sad_pis.Products.CarcassproductsController">
+   <children>
+      <AnchorPane id="AnchorPane" stylesheets="@../css/products.css">
+         <children>
+            <AnchorPane prefHeight="59.0" prefWidth="1040.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <VBox prefHeight="38.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="294.0" text="Products">
+                           <font>
+                              <Font name="Century Gothic" size="30.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="19.0" prefWidth="131.0" text="Meat ">
+                           <VBox.margin>
+                              <Insets left="15.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="80.0" prefHeight="402.0" prefWidth="262.0" styleClass="container" AnchorPane.bottomAnchor="149.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="80.0">
+               <children>
+                  <VBox layoutX="14.0" layoutY="12.0" prefHeight="379.0" prefWidth="561.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox prefHeight="31.0" prefWidth="352.0">
+                           <children>
+                              <Label layoutX="35.0" layoutY="10.0" prefHeight="50.0" prefWidth="91.0" styleClass="form-label" text="Product No.">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="product_no" layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="64.0" text="0001">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="2.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <VBox prefHeight="61.0" prefWidth="352.0">
+                           <children>
+                              <Label prefHeight="26.0" prefWidth="167.0" text="Product Name:">
+                                 <font>
+                                    <Font name="Coco Gothic" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="text_name" prefHeight="25.0" prefWidth="342.0">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="64.0" prefHeight="62.0" prefWidth="311.0">
+                           <children>
+                              <Label prefHeight="26.0" prefWidth="167.0" text="Meat Type:">
+                                 <font>
+                                    <Font name="Coco Gothic" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="30.0" prefWidth="311.0">
+                                 <children>
+                                    <ComboBox fx:id="cbo_meat" prefHeight="25.0" prefWidth="167.0">
+                                       <HBox.margin>
+                                          <Insets left="20.0" top="2.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="64.0" prefHeight="61.0" prefWidth="352.0">
+                           <children>
+                              <Label prefHeight="26.0" prefWidth="167.0" text="Price Rate:">
+                                 <font>
+                                    <Font name="Coco Gothic" size="12.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="text_price" prefHeight="25.0" prefWidth="275.0">
+                                 <VBox.margin>
+                                    <Insets left="20.0" right="20.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <HBox prefHeight="50.0" prefWidth="1121.0">
+                           <children>
+                              <JFXButton id="button-add" fx:id="btn_addproduct" onAction="#addCarcassProduct" prefHeight="30.0" prefWidth="222.0" stylesheets="@../css/buttons.css" text="Add Product" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Calibri" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="5.0" radius="2.0" spread="0.2" width="5.0" />
+               </effect>
+            </AnchorPane>
+            <AnchorPane layoutX="325.0" layoutY="80.0" prefHeight="541.0" prefWidth="767.0" styleClass="container" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="283.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="80.0">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" height="5.0" radius="2.0" spread="0.2" width="5.0" />
+               </effect>
+               <children>
+                  <VBox prefHeight="38.0" prefWidth="725.0" AnchorPane.bottomAnchor="503.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="40.0" prefWidth="761.0">
+                           <children>
+                              <VBox layoutX="14.0" layoutY="8.0" prefHeight="38.0" prefWidth="761.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label prefHeight="37.0" prefWidth="225.0" text="Categories" textFill="#808080">
+                                       <font>
+                                          <Font name="Calibri Bold" size="24.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="15.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Separator opacity="0.57" prefHeight="0.0" prefWidth="761.0">
+                                       <effect>
+                                          <InnerShadow color="#909090" />
+                                       </effect>
+                                    </Separator>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="38.0">
+                     <children>
+                        <JFXTabPane prefHeight="503.0" prefWidth="761.0" stylesheets="@../css/tabpane.css">
+                           <tabs>
+                              <Tab text="Beef Products">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="tab-anchorpane">
+                                       <children>
+                                          <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <TableView fx:id="table_beef" prefHeight="435.0" prefWidth="235.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="col_beefname" prefWidth="212.0" resizable="false" sortable="false" text="Product Name" />
+                                                      <TableColumn fx:id="col_beefprice" prefWidth="182.0" resizable="false" sortable="false" text="Price" />
+                                                      <TableColumn fx:id="beef_update" prefWidth="250.0" resizable="false" sortable="false" text="Action" />
+                                                   </columns>
+                                                   <VBox.margin>
+                                                      <Insets left="50.0" right="50.0" top="25.0" />
+                                                   </VBox.margin>
+                                                </TableView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <graphic>
+                                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/livestock.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Tab>
+                              <Tab text="Pork Products">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="tab-anchorpane">
+                                       <children>
+                                          <VBox layoutX="54.0" layoutY="23.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <TableView fx:id="tbl_pork" prefHeight="435.0" prefWidth="235.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="col_porkname" prefWidth="212.0" resizable="false" sortable="false" text="Product Name" />
+                                                      <TableColumn fx:id="col_porkprice" prefWidth="182.0" resizable="false" sortable="false" text="Price" />
+                                                      <TableColumn fx:id="pork_update" prefWidth="259.0" resizable="false" sortable="false" text="Action" />
+                                                   </columns>
+                                                   <VBox.margin>
+                                                      <Insets left="50.0" right="50.0" top="25.0" />
+                                                   </VBox.margin>
+                                                </TableView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <graphic>
+                                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/pig.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Tab>
+                              <Tab text="Chicken Products">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="tab-anchorpane">
+                                       <children>
+                                          <VBox layoutX="86.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <TableView fx:id="tbl_chicken" prefHeight="435.0" prefWidth="235.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="col_chickname" prefWidth="212.0" resizable="false" sortable="false" text="Product Name" />
+                                                      <TableColumn fx:id="col_chickprice" prefWidth="182.0" resizable="false" sortable="false" text="Price" />
+                                                      <TableColumn fx:id="chick_update" prefWidth="250.0" resizable="false" sortable="false" text="Action" />
+                                                   </columns>
+                                                   <VBox.margin>
+                                                      <Insets left="50.0" right="50.0" top="25.0" />
+                                                   </VBox.margin>
+                                                </TableView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <graphic>
+                                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/chicken.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Tab>
+                              <Tab text="All Products">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="tab-anchorpane">
+                                       <children>
+                                          <VBox layoutX="68.0" layoutY="23.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <HBox prefHeight="45.0" prefWidth="761.0">
+                                                   <children>
+                                                      <TextField fx:id="text_search" prefHeight="30.0" prefWidth="200.0" promptText="Search">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" top="8.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                                <TableView fx:id="tbl_all" prefHeight="415.0" prefWidth="761.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="all_name" prefWidth="204.0" resizable="false" sortable="false" text="Product Name" />
+                                                      <TableColumn fx:id="all_meat" prefWidth="116.0" resizable="false" text="Meat" />
+                                                      <TableColumn fx:id="all_price" prefWidth="118.0" resizable="false" sortable="false" text="Mark up Price" />
+                                                      <TableColumn fx:id="all_update" prefWidth="217.0" resizable="false" sortable="false" text="Action" />
+                                                   </columns>
+                                                   <VBox.margin>
+                                                      <Insets left="50.0" right="50.0" />
+                                                   </VBox.margin>
+                                                </TableView>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                           </tabs>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </VBox.margin>
+                        </JFXTabPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

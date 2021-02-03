@@ -1,0 +1,18 @@
+.profile-header{
+    -fx-background-color: #333337;
+    -fx-background-radius: 5;
+    
+}
+.profile-container{
+    -fx-background-radius: 6;
+}
+.employee-container{
+    -fx-background-color: white;
+}
+.profile-button{
+    -fx-background-color: #1B3450;
+    -fx-background-radius: 8;
+}
+.profile-button-upload-image{
+    -fx-background-color: #D31726;
+}

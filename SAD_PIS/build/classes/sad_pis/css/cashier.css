@@ -1,0 +1,66 @@
+.header{
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 0 0 0.2 0;    
+}
+.cart-container{
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-width: 0.5 0.5 0.5 0.5;
+    -fx-border-radius: 4;
+}
+.header-buttons:hover
+{    
+    -fx-text-fill: white;
+    -fx-background-color:#2FCC55;
+}
+/*cart design*/
+.label-container{
+    -fx-background-color: #D9EDF7;
+    -fx-border-radius: 2;
+}
+.maincart-container{
+    -fx-background-color: #F5F5F5;
+}
+.btn-checkout{
+    -fx-background-color: #00A65A;
+    -fx-border-radius: 4;
+}
+.btn-cancel{
+    -fx-background-color: #DD4B39;
+    -fx-border-radius: 4;
+}
+
+/*TAB PANE*/
+
+.tab{
+    -fx-background-color: black;
+    -fx-background-radius: 5;
+    -fx-pref-width: 80;    
+}
+
+.jfx-tab-pane .headers-region{
+    -fx-background-color: none;    
+}
+
+.jfx-tab-pane .control-buttons-tab .tab-down-button{
+    -fx-background-color: black;
+}
+.jfx-tab-pane .tab-header-background{
+    -fx-background-color: none;
+    
+}
+.jfx-tab-pane .tab-selected-line{
+    -fx-background-color: black;
+}
+.jfx-tab-pane .tab .tab-label{
+    -fx-font-weight: normal;
+    -fx-text-fill: white;
+    -fx-font-size: 12;            
+    
+}
+.jfx-tab-pane .depth-container{
+    -fx-effect: none;
+
+}
+

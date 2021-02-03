@@ -1,0 +1,9 @@
+
+.container{
+    -fx-background-radius: 20 0 20 0;    
+    -fx-background-color: white;    
+}
+.heading{
+    -fx-background-color: #18985A;
+    -fx-background-radius: 20 0 0 0;   
+}
